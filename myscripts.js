@@ -2,13 +2,9 @@ let extraQ2 = "Well somehow your friends are very convincing and drags you out a
 let extraQ3a = "YAS! We were thinking the same thing!";
 let extraQ3b = "naaah we already actually decided. hehe. We were just asking you out of courtsey. put on a cute bikini";
 
-function show(next) {
-    var x = document.getElementById(next);
-    if(x.style.display === "none"){
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+function next(previous, next) {
+    var n = document.getElementById(next);
+    var p = document.getElementById(previous);
+    n.style.display = "block";
+    p.style.display = "none";
 }
-
-function hide() {}
