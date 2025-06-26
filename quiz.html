@@ -2,106 +2,113 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <script src="myscripts.js">
-            let extraQ2 = "Well somehow your friends are very convincing and drags you out anyway. Sneaky friends";
-            let extraQ3a = "YAS! We were thinking the same thing!";
-            let extraQ3b = "naaah we already actually decided. hehe. We were just asking you out of courtsey. put on a cute bikini";
-        </script>
+        <script src="myscripts.js"></script>
     </head>
     <body>
         <div class="center">
-            <!--This is a fish quiz. Started after being quizzed on fishes in Norway after a trip with my friends in Brussel-->
-            <p>
-                Today is a sunny and warm day in the middle of summer vacation. You feel like you're melting.
-                Then your friends hit you up.
-            </p>
+            <div id="q1">
+                <!--This is a fish quiz. Started after being quizzed on fishes in Norway after a trip with my friends in Brussel-->
+                <p>
+                    Today is a sunny and warm day in the middle of summer vacation. You feel like you're melting.
+                    Then your friends hit you up.
+                </p>
 
-            <p>Hey friend! Wanna hand out today?</p>
-            <button>>Yeah sure!</button> <!-- (E) -->
-            <button>>Ehh not really</button> <!-- (I) -->
-            <!--If they choose opt2, add extraQ2 to next question -->
+                <p>Hey friend! Wanna hand out today?</p>
+                <button onclick="show('q2')">Yeah sure!</button> <!-- (E) -->
+                <button onclick="show('q2')">Ehh not really</button> <!-- (I) -->
+                <!--If they choose opt2, add extraQ2 to next question -->
+            </div>
+            <div class="hide" id="q2">
+                <p>Cool! What do you want to do?</p>
+                <button>How about the beach?</button> <!-- [S, P]-->
+                <button>I just wanna stay in the aircon today bro</button> <!-- [I, J]  -->
+                <button>cafe jumping?</button> <!-- [N, F]  -->
 
-            <p>Cool! What do you want to do?</p>
-            <button>>How about the beach?</button> <!-- [S, P]-->
-            <button>>I just wanna stay in the aircon today bro</button> <!-- [I, J]  -->
-            <button>>cafe jumping?</button> <!-- [N, F]  -->
-
-            <!--If they choose opt1, add extraQ3a-->
-            <!--If they choose any other opt, add extraQ3b-->
-            
-            <p>
-                And so they drag you to the beach. The sun is blaring and you feel like you're melting.
-                What's the first thing you do when you get there?
-            </p>
-            <button>>Jump into the water. Who's scared of a little sunburn!</button> <!-- [E, P] -->
-            <button>>Put on sunscreen. Protection is important</button> <!-- [S, J] -->
-            <button>>Whip out my book</button> <!-- [I, N]-->
-            <button>>Look around and start wondering about sea creatures and water currents</button> <!-- [N, T] -->
-
-            <p>
-                You enjoy your day doing whatever you please. 
-                And while you weren't looking, a seagull got into your favourite snacks! pesy birds. What's your strategy?
-            </p>
-            <button>>Flail and scream at them dramatically</button> <!-- [F, P] -->
-            <button>>Calmly relocate and guard the rest of the food</button> <!-- [J, S]  -->
-            <button>>Try to befriend one of them. Maybe they were just hungry</button> <!-- [N, F] -->
-            <button>>Use this as a distraction to steal your friends's snacks</button> <!-- [T, P] -->
-
-            <p>
-                When that episodes passed, your friends want to split up to do different things. What do you choose?
-            </p>
-            <button>>Swim, of couse! People come to beaches to swim</button> <!-- [S, P] -->
-            <button>>Def, ice cream. Needed a break anyways</button> <!-- [F, I] -->
-            <button>>Why not both? ice cream while swimming? Sound like good time</button> <!-- [E, N] -->
-            <button>>Coin flip time!</button> <!-- [T, J]-->
-
-            <p>
-                While going around the beach with your friends you notice a familiar saound.
-                This is your favourite song! This is your jam! What do you do?
-            </p>
-            <button>>Start vibing and invite your friends to dance</button> <!-- [E, F] -->
-            <button>>Smile and quietly enjoy the moment</button> <!-- [I, S] -->
-            <button>>Think about the memories tied to this song</button> <!-- [N, F] -->
-            <button>>Check if it's on someone's playlist so you can add it to yours later</button> <!-- [T, J] -->
-
-
-            <p>
-                The day is drawing to a close and the sun is setting, painting the sky a beautiful pink.
-                That's when you find a mysterious, glowing seashell. 
-                What do you do?
-            </p>
-            <button>>Pick it up without hesitation. Its giving main character energy</button> <!-- [E, P] -->
-            <button>>Inspect it. Maybe it's radioactive? Bioluminescent algae? Maybe it's the UV rays?</button> <!-- [T, N] -->
-            <button>>Leave it alone. Doesn't feel safe</button> <!-- [I, S] -->
-            <button>>Throw it back into the sea. MAybe a mermaid lost it?</button> <!-- [F, N]-->
-
-            <p>
-                And then in the distance you see something... blue... and tall.
-                OMG! It's a giant wave. 
-                What do you do?
-            </p>
-            <button>>Run away</button> <!-- (S, J) -->
-            <button>>Try to surf it</button> <!-- (E, P) -->
-            <button>>Save the children building a sand castle</button> <!-- (F, J)-->
-            <button>>Accept your demise</button> <!-- (N, I)-->
-
-            <p>
-                Well, whatever you chose... you failed and ended up inside the wave.
-                But you find it odd. You didn't feel any pain?
-            </p>
-            <button>>Doesn't matter. I try to swim to the surface</button> <!-- (T, J) -->
-            <button>>So I open my eyes</button> <!-- (N, P) -->
-
-            <p>
-                But something feels different. Woah... you have a mermaid fin now. What are your future plans?
-            </p>
-            <button>>Explore the ocean and find Atlantis</button> <!-- (N, P) -->
-            <button>>Establish a political mermaid kingdom with democratic reforms</button> <!-- (T, J)  -->
-            <button>>Adopt 50 clownfish and open an underwater cafe</button> <!-- (F, P) -->
-            <button>>pinch myself. This has to be a dream</button>
-
-            <p>and then you opened your eyes. It was all a dream, and now you're sunburnt</p>
-            <p>The end</p>
+                <!--If they choose opt1, add extraQ3a-->
+                <!--If they choose any other opt, add extraQ3b-->
+            </div>
+            <div class="hide" id="q3">
+                <p>
+                    And so they drag you to the beach. The sun is blaring and you feel like you're melting.
+                    What's the first thing you do when you get there?
+                </p>
+                <button>Jump into the water. Who's scared of a little sunburn!</button> <!-- [E, P] -->
+                <button>Put on sunscreen. Protection is important</button> <!-- [S, J] -->
+                <button>Whip out my book</button> <!-- [I, N]-->
+                <button>Look around and start wondering about sea creatures and water currents</button> <!-- [N, T] -->
+            </div>
+            <div class="hide" id="q4">
+                <p>
+                    You enjoy your day doing whatever you please. 
+                    And while you weren't looking, a seagull got into your favourite snacks! pesy birds. What's your strategy?
+                </p>
+                <button>Flail and scream at them dramatically</button> <!-- [F, P] -->
+                <button>Calmly relocate and guard the rest of the food</button> <!-- [J, S]  -->
+                <button>Try to befriend one of them. Maybe they were just hungry</button> <!-- [N, F] -->
+                <button>Use this as a distraction to steal your friends's snacks</button> <!-- [T, P] -->
+            </div>
+            <div class="hide" id="q5">
+                <p>
+                    When that episodes passed, your friends want to split up to do different things. What do you choose?
+                </p>
+                <button>Swim, of couse! People come to beaches to swim</button> <!-- [S, P] -->
+                <button>Def, ice cream. Needed a break anyways</button> <!-- [F, I] -->
+                <button>Why not both? ice cream while swimming? Sound like good time</button> <!-- [E, N] -->
+                <button>Coin flip time!</button> <!-- [T, J]-->
+            </div>
+            <div class="hide" id="q6">
+                <p>
+                    While going around the beach with your friends you notice a familiar saound.
+                    This is your favourite song! This is your jam! What do you do?
+                </p>
+                <button>Start vibing and invite your friends to dance</button> <!-- [E, F] -->
+                <button>Smile and quietly enjoy the moment</button> <!-- [I, S] -->
+                <button>Think about the memories tied to this song</button> <!-- [N, F] -->
+                <button>Check if it's on someone's playlist so you can add it to yours later</button> <!-- [T, J] -->
+            </div>
+            <div class="hide" id="q7">
+                <p>
+                    The day is drawing to a close and the sun is setting, painting the sky a beautiful pink.
+                    That's when you find a mysterious, glowing seashell. 
+                    What do you do?
+                </p>
+                <button>Pick it up without hesitation. Its giving main character energy</button> <!-- [E, P] -->
+                <button>Inspect it. Maybe it's radioactive? Bioluminescent algae? Maybe it's the UV rays?</button> <!-- [T, N] -->
+                <button>Leave it alone. Doesn't feel safe</button> <!-- [I, S] -->
+                <button>Throw it back into the sea. MAybe a mermaid lost it?</button> <!-- [F, N]-->
+            </div>
+            <div class="hide" id="q8">
+                <p>
+                    And then in the distance you see something... blue... and tall.
+                    OMG! It's a giant wave. 
+                    What do you do?
+                </p>
+                <button>Run away</button> <!-- (S, J) -->
+                <button>Try to surf it</button> <!-- (E, P) -->
+                <button>Save the children building a sand castle</button> <!-- (F, J)-->
+                <button>Accept your demise</button> <!-- (N, I)-->
+            </div>
+            <div class="hide" id="q9">
+                <p>
+                    Well, whatever you chose... you failed and ended up inside the wave.
+                    But you find it odd. You didn't feel any pain?
+                </p>
+                <button>Doesn't matter. I try to swim to the surface</button> <!-- (T, J) -->
+                <button>So I open my eyes</button> <!-- (N, P) -->
+            </div>
+            <div class="hide" id="q10">
+                <p>
+                    But something feels different. Woah... you have a mermaid fin now. What are your future plans?
+                </p>
+                <button>Explore the ocean and find Atlantis</button> <!-- (N, P) -->
+                <button>Establish a political mermaid kingdom with democratic reforms</button> <!-- (T, J)  -->
+                <button>Adopt 50 clownfish and open an underwater cafe</button> <!-- (F, P) -->
+                <button>pinch myself. This has to be a dream</button>
+            </div>
+            <div class="hide" id="q11">
+                <p>and then you opened your eyes. It was all a dream, and now you're sunburnt</p>
+                <p>The end</p>
+            </div>
         </div>
     </body>
 </html>
