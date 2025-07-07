@@ -14,15 +14,15 @@
                 </p>
 
                 <p>Hey friend! Wanna hand out today?</p>
-                <button onclick="next('q1','q2')">Yeah sure!</button> <!-- (E) -->
-                <button onclick="next('q1','q2')">Ehh not really</button> <!-- (I) -->
+                <button onclick="next('q1','q2');add(['e'])">Yeah sure!</button> 
+                <button onclick="next('q1','q2');add(['i'])">Ehh not really</button>
                 <!--If they choose opt2, add extraQ2 to next question -->
             </div>
             <div class="hide" id="q2">
                 <p>Cool! What do you want to do?</p>
-                <button onclick="next('q2','q3')">>How about the beach?</button> <!-- [S, P]-->
-                <button onclick="next('q2','q3')">>I just wanna stay in the aircon today bro</button> <!-- [I, J]  -->
-                <button onclick="next('q2','q3')">>cafe jumping?</button> <!-- [N, F]  -->
+                <button onclick="next('q2','q3');add(['s', 'p'])">How about the beach?</button> 
+                <button onclick="next('q2','q3');add(['i', 'j'])">I just wanna stay in the aircon today bro</button> 
+                <button onclick="next('q2','q3');add(['n', 'f'])">cafe jumping?</button> 
 
                 <!--If they choose opt1, add extraQ3a-->
                 <!--If they choose any other opt, add extraQ3b-->
@@ -32,39 +32,39 @@
                     And so they drag you to the beach. The sun is blaring and you feel like you're melting.
                     What's the first thing you do when you get there?
                 </p>
-                <button onclick="next('q3','q4')">>Jump into the water. Who's scared of a little sunburn!</button> <!-- [E, P] -->
-                <button onclick="next('q3','q4')">>Put on sunscreen. Protection is important</button> <!-- [S, J] -->
-                <button onclick="next('q3','q4')">>Whip out my book</button> <!-- [I, N]-->
-                <button onclick="next('q3','q4')">>Look around and start wondering about sea creatures and water currents</button> <!-- [N, T] -->
+                <button onclick="next('q3','q4');add(['e', 'p'])">Jump into the water. Who's scared of a little sunburn!</button>
+                <button onclick="next('q3','q4');add(['s', 'j'])">Put on sunscreen. Protection is important</button>
+                <button onclick="next('q3','q4');add(['i', 'n'])">Whip out my book</button>
+                <button onclick="next('q3','q4');add(['n', 't'])">Look around and start wondering about sea creatures and water currents</button> 
             </div>
             <div class="hide" id="q4">
                 <p>
                     You enjoy your day doing whatever you please. 
                     And while you weren't looking, a seagull got into your favourite snacks! pesy birds. What's your strategy?
                 </p>
-                <button onclick="next('q4','q5')">>Flail and scream at them dramatically</button> <!-- [F, P] -->
-                <button onclick="next('q4','q5')">>Calmly relocate and guard the rest of the food</button> <!-- [J, S]  -->
-                <button onclick="next('q4','q5')">>Try to befriend one of them. Maybe they were just hungry</button> <!-- [N, F] -->
-                <button onclick="next('q4','q5')">>Use this as a distraction to steal your friends's snacks</button> <!-- [T, P] -->
+                <button onclick="next('q4','q5');add(['f', 'p'])">Flail and scream at them dramatically</button> 
+                <button onclick="next('q4','q5');add(['j', 's'])">Calmly relocate and guard the rest of the food</button> 
+                <button onclick="next('q4','q5');add(['n', 'f'])">Try to befriend one of them. Maybe they were just hungry</button> 
+                <button onclick="next('q4','q5');add(['t', 'p'])">Use this as a distraction to steal your friends's snacks</button>
             </div>
             <div class="hide" id="q5">
                 <p>
                     When that episodes passed, your friends want to split up to do different things. What do you choose?
                 </p>
-                <button onclick="next('q5','q6')">>Swim, of couse! People come to beaches to swim</button> <!-- [S, P] -->
-                <button onclick="next('q5','q6')">>Def, ice cream. Needed a break anyways</button> <!-- [F, I] -->
-                <button onclick="next('q5','q6')">>Why not both? ice cream while swimming? Sound like good time</button> <!-- [E, N] -->
-                <button onclick="next('q5','q6')">>Coin flip time!</button> <!-- [T, J]-->
+                <button onclick="next('q5','q6');add(['s', 'p'])">Swim, of couse! People come to beaches to swim</button>
+                <button onclick="next('q5','q6');add(['f', 'i'])">Def, ice cream. Needed a break anyways</button> 
+                <button onclick="next('q5','q6');add(['e','n'])">Why not both? ice cream while swimming? Sound like good time</button> 
+                <button onclick="next('q5','q6');add(['t','j'])">Coin flip time!</button> 
             </div>
             <div class="hide" id="q6">
                 <p>
                     While going around the beach with your friends you notice a familiar saound.
                     This is your favourite song! This is your jam! What do you do?
                 </p>
-                <button onclick="next('q6','q7')">>Start vibing and invite your friends to dance</button> <!-- [E, F] -->
-                <button onclick="next('q6','q7')">>Smile and quietly enjoy the moment</button> <!-- [I, S] -->
-                <button onclick="next('q6','q7')">>Think about the memories tied to this song</button> <!-- [N, F] -->
-                <button onclick="next('q6','q7')">>Check if it's on someone's playlist so you can add it to yours later</button> <!-- [T, J] -->
+                <button onclick="next('q6','q7');add(['e','f'])">Start vibing and invite your friends to dance</button> 
+                <button onclick="next('q6','q7');add(['i','s'])">Smile and quietly enjoy the moment</button> 
+                <button onclick="next('q6','q7');add(['n','f'])">Think about the memories tied to this song</button> 
+                <button onclick="next('q6','q7');add(['t','j'])">Check if it's on someone's playlist so you can add it to yours later</button>
             </div>
             <div class="hide" id="q7">
                 <p>
@@ -72,10 +72,10 @@
                     That's when you find a mysterious, glowing seashell. 
                     What do you do?
                 </p>
-                <button onclick="next('q7','q8')">>Pick it up without hesitation. Its giving main character energy</button> <!-- [E, P] -->
-                <button onclick="next('q7','q8')">>Inspect it. Maybe it's radioactive? Bioluminescent algae? Maybe it's the UV rays?</button> <!-- [T, N] -->
-                <button onclick="next('q7','q8')">>Leave it alone. Doesn't feel safe</button> <!-- [I, S] -->
-                <button onclick="next('q7','q8')">>Throw it back into the sea. MAybe a mermaid lost it?</button> <!-- [F, N]-->
+                <button onclick="next('q7','q8');add(['e', 'p'])">Pick it up without hesitation. Its giving main character energy</button>
+                <button onclick="next('q7','q8');add(['t', 'n'])">Inspect it. Maybe it's radioactive? Bioluminescent algae? Maybe it's the UV rays?</button> 
+                <button onclick="next('q7','q8');add(['i', 's'])">Leave it alone. Doesn't feel safe</button> 
+                <button onclick="next('q7','q8');add(['f', 'n'])">Throw it back into the sea. MAybe a mermaid lost it?</button>
             </div>
             <div class="hide" id="q8">
                 <p>
@@ -83,31 +83,35 @@
                     OMG! It's a giant wave. 
                     What do you do?
                 </p>
-                <button onclick="next('q8','q9')">>Run away</button> <!-- (S, J) -->
-                <button onclick="next('q8','q9')">>Try to surf it</button> <!-- (E, P) -->
-                <button onclick="next('q8','q9')">>Save the children building a sand castle</button> <!-- (F, J)-->
-                <button onclick="next('q8','q9')">>Accept your demise</button> <!-- (N, I)-->
+                <button onclick="next('q8','q9');add(['s', 'j'])">Run away</button> <!-- (S, J) -->
+                <button onclick="next('q8','q9');add(['e', 'p'])">Try to surf it</button> <!-- (E, P) -->
+                <button onclick="next('q8','q9');add(['f', 'j'])">Save the children building a sand castle</button> 
+                <button onclick="next('q8','q9');add(['n', 'i'])">Accept your demise</button> <!-- (N, I)-->
             </div>
             <div class="hide" id="q9">
                 <p>
                     Well, whatever you chose... you failed and ended up inside the wave.
                     But you find it odd. You didn't feel any pain?
                 </p>
-                <button onclick="next('q9','q10')">>Doesn't matter. I try to swim to the surface</button> <!-- (T, J) -->
-                <button onclick="next('q9','q10')">>So I open my eyes</button> <!-- (N, P) -->
+                <button onclick="next('q9','q10');add(['t','j'])">Doesn't matter. I try to swim to the surface</button> 
+                <button onclick="next('q9','q10');add(['n', 'p'])">So I open my eyes</button> 
             </div>
             <div class="hide" id="q10">
                 <p>
                     But something feels different. Woah... you have a mermaid fin now. What are your future plans?
                 </p>
-                <button onclick="next('q10','q11')">>Explore the ocean and find Atlantis</button> <!-- (N, P) -->
-                <button onclick="next('q10','q11')">>Establish a political mermaid kingdom with democratic reforms</button> <!-- (T, J)  -->
-                <button onclick="next('q10','q11')">>Adopt 50 clownfish and open an underwater cafe</button> <!-- (F, P) -->
-                <button onclick="next('q10','q11')">>pinch myself. This has to be a dream</button>
+                <button onclick="next('q10','q11');add(['n', 'p'])">Explore the ocean and find Atlantis</button> 
+                <button onclick="next('q10','q11');add(['t','j'])">Establish a political mermaid kingdom with democratic reforms</button> 
+                <button onclick="next('q10','q11');add(['f', 'p'])">Adopt 50 clownfish and open an underwater cafe</button> 
+                <button onclick="next('q10','q11');add(['s','t'])">pinch myself. This has to be a dream</button>
             </div>
             <div class="hide" id="q11">
                 <p>and then you opened your eyes. It was all a dream, and now you're sunburnt</p>
                 <p>The end</p>
+                <button onclick="next('q11', 'results'); done()">See results</button>
+            </div>
+            <div class="hide" id="results">
+                <p id="mbti"></p>
             </div>
         </div>
     </body>
