@@ -1,22 +1,38 @@
-body{
-    background-color:#14AAD0;
-    font-family: Arial, sans-serif;
+body {
+    background-color: #14AAD0;
+    font-family: Arial, sans-serif; 
+    line-height: 1.6;
 }
-p{}
-button{
+
+button {
     background-color: #008CBA;
     display: block;
+    color: #F5ECCB; 
+    border: none;
+    border-radius: 20px; 
+    padding: 15px 20px; 
+    margin: 10px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    font-size: 18px;
+    margin: 0 auto; 
+}
+
+button:hover {
+    background-color: #005f7a; 
+}
+
+.center {
     margin: auto;
     text-align: center;
-    padding: 10px;
-    border-radius: 12px;
+    width: 60%;
+    padding: 20px; 
+    background-color: #F5ECCB;
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    font-size: 18px;
 }
-.center {
-  margin: auto;
-  text-align: center;
-  width: 50%;
-  padding: 10px;
-}
+
 .hide{
   display: none;
 }
