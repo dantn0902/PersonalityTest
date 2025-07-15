@@ -16,37 +16,37 @@ let mbtiScore = {
 
 // [img, fact1, fact2, fact3, fact4, soulmate, enemy, art, friend dynamikk, enemy dynamikk]
 let mbtiArrays = {
-    intj: ["","the quiet but smart kid","lays low","no one thinks about you","fact4","enfp","esfp","tunge"],
+    intj: ["","the quiet but smart kid","Viber for seg selv","Ser alt men ingen ser deg","Loner","enfp","esfp","Tunge"],
     
-    intp: ["","Teip over munnen klarer ikke engang å stoppe deg fra å yappe","nieche hobbies","starter setningen med 'teknisk sett...'","flørter med deg via Wikipedia-lenker","entj","esfj","lange"], 
+    intp: ["","Certified yapper","smart yapper","'umm actually....'","Aristoteles wannabe","entj","esfj","Lange"], 
     
-    entj: ["","big boss CEO aura","biggest fish in the lake","vet alltid hvordan ting skal gjøres","fact4","intp","isfp","gjedde"],
+    entj: ["","Big boss of the lake","Hard on the outside soft on the inside","'I want it I got it'","kontrollfreak","intp","isfp","Gjedde"],
     
-    entp: ["","hobbit","livlig liten kar som liker å eksplorere","i'm just a guy","fact4","infj","istj","abbor"], 
+    entp: ["","Rampete liten drittunge, men fremdeles favoritten","Starter drama fordi du kjeder deg","Liker utfordringer","Irriterende","infj","istj","Abbor"], 
     
-    infj: ["","wholesome","backbone of every friend group","moral compass","fact4","enfp","estp","hyse"],
+    infj: ["","Wholesome","Hjelpsom, men vil ikke ha hjelp","Sårbar","'Its not a phase mom!'","enfp","estp","Knurr"],
     
-    infp: ["","følsom men med pigger", "ser alltid oppover","fact3","fact4","enfj","estj","fjesing"],
+    infp: ["","Gråter mot månen", "Lojal","Du tror du er dyp, men du er ikke det","Ser muligheter men tørr ikke gripe tak","enfj","estj","Fjesing"],
     
-    enfj: ["","big boy energy","the big biys trenger en leder også", "passer på alle","fact4","infp","istp","tunfisk"], 
+    enfj: ["","Ta vann over hodet","Leder fisker like store som seg selv", "Motiverer hverandre","Lever i store stimer","infp","istp","Tunfisk"], 
     
-    enfp: ["","chaotic good", "elsker folk", "go with the flow man","fact4","infj",,"istj","reke"], 
+    enfp: ["","Svømmer i gigantiske stimer, men ingen vet hvor de skal", "Energisk og sprudlende", "'Go with the flow man'","Fullfører aldri, men optimistisk","infj",,"istj","Reke"], 
     
-    istj: ["","reliable but cold","logical default fish", "very structured","fact4","isfj","enfp","torsk"], 
+    istj: ["","Excel-fetish","Teachers pet", "Prøver for hardt","For strukturerte","isfj","enfp","Torsk"], 
     
-    istp: ["","liker å mekke i fred", "trives i eget skjell", "problem solver alone","fact4","isfp","enfj", "ermittkreps"],
+    istp: ["","Loners at heart", "For mange hobbyer fordi du er aldri med folk", "Observant","Background character som tunge","isfp","enfj", "Ermittkreps"],
     
-    estj: ["","i'm that bitch", "kontroll og orden", "they know what they want","fact4","isfj","infp", "harr"],
+    estj: ["","Stoler ikke på andre", "God complex", "Hvorfor gi oppgaven til andre når jeg kan gjøre den bedre selv","Du vet hva du vil","isfj","infp", "Harr"],
     
-    estp: ["","forsvinner når tiden er rette", "mystisk", "elsker å reise langt","fact4","esfp","infj", "europeisk ål"],
+    estp: ["","Bad communicator", "Intrusive thoughts", "Will fight a child and win","Will pick a fight with God","esfp","infj", "Europeisk ål"],
     
-    isfj: ["","ikke noe drama", "holder familien trygg","fact3","fact4","sefj","entp","sjøhest"],
+    isfj: ["","lojal mot de nærmeste", "Just a wholesome grandma","Tar vare på trandisjoner","Too cute to diss","sefj","entp","Sjøhest"],
     
-    isfp: ["","artsy","sensitive med stil","100 eyes to appreciate your beauty","fact4","infp","entj","kamskjell"],
+    isfp: ["","Shallow","Adaptable","Delulu","Anxiety to the max","infp","entj","Kamskjell"],
     
-    esfj: ["", "gentle giant","will take care of you","alle elsker dem","fact4","isfj","intp","sjøku"],
+    esfj: ["", "Gentle giant","Moren i venne gjengen","Alle elsker dem","Too cute to diss 2.0","isfj","intp","Sjøku"],
     
-    esfp: ["", "tiktok energy", "juicy lips for you", "center of attention","fact4","isfp","intj","berggylt"]
+    esfp: ["", "Tiktok star wannabe", "Juicy lips for you", "Attention seeker","No real homies, aka. loner in the closet","isfp","intj","Berggylt"]
 };
 
 function neste(forrige, neste) {
@@ -54,6 +54,10 @@ function neste(forrige, neste) {
     var fr = document.getElementById(forrige);
     ne.style.display = "block";
     fr.style.display = "none";
+    /*
+    document.getElementById(forrige).classList.add("hide");
+    document.getElementById(neste).classList.remove("hide");
+    */
 }
 
 function poeng(letters){
@@ -77,10 +81,10 @@ function done() {
     let result = mbtiArrays[mbti];
     document.getElementById("artstype").textContent = result[7]+"!";
     document.getElementById("bilde").src = result[0];
-    document.getElementById("fact1").src = result[1];
-    document.getElementById("fact2").src = result[2];
-    document.getElementById("fact3").src = result[3];
-    document.getElementById("fact4").src = result[4];
-    document.getElementById("friend").src = result[5];
-    document.getElementById("enemy").src = result[6];
+    document.getElementById("fact1").textContent = result[1];
+    document.getElementById("fact2").textContent = result[2];
+    document.getElementById("fact3").textContent = result[3];
+    document.getElementById("fact4").textContent = result[4];
+    let friend = result[5];
+    let enemy = result[6];
 }
