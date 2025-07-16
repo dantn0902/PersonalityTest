@@ -6,130 +6,178 @@
     </head>
     <body>
         <div class="center">
-            <div id="q1">
-                <!--This is a fish quiz. Started after being quizzed on fishes in Norway after a trip with my friends in Brussel-->
-                <p>
+            <div id="intro" class="align">
+                <div>
                     I dag er en varm og skinnende sommer dag midt i juli. Desverre så smelter du av varmen...
                     Plutselig får du en melding.
-                </p>
-
-                <p class="rMessage">Yo! vil du henge i dag?</p>
-                <button class="sMessage" onclick="neste('q1','q2');poeng(['e'])">Ja selvfølgelig!</button> 
-                <button class="sMessage" onclick="neste('q1','q2');poeng(['i'])">Ehh...egentlig ikke...</button>
-                <!--If they choose opt2, poeng extraQ2 to neste question -->
+                </div>
+                <div class ="buttons">
+                    <button id="app" onclick="neste('intro','q1')">start</button>
+                </div>
             </div>
-            <div class="hide" id="q2">
-                <p class="rMessage" id="q2svar"></p>
-                <p class="rMessage">Hva vil du gjøre?</p>
-                <button class="sMessage" onclick="neste('q2','q3');poeng(['s', 'p'])">Stranda?</button> 
-                <button class="sMessage" onclick="neste('q2','q3');poeng(['i', 'j'])">Vil bare bli inne med vifta på full blast i dag ass</button> 
-                <button class="sMessage" onclick="neste('q2','q3');poeng(['n', 'f'])">kafe?</button> 
 
-                <!--If they choose opt1, poeng extraQ3a-->
-                <!--If they choose any other opt, poeng extraQ3b-->
+
+            <div id="phone" class="hide">
+                <div class="header">imaginary friend</div>
+                <div id="screen">
+                    <div class="hide" id="q1">
+                        <div class="message">
+                            Yo! vil du henge i dag?
+                        </div>
+                        <div class="phonebuttons">
+                            <button onclick="neste('q1','q2');poeng(['e'])">Ja selvfølgelig!</button> 
+                            <button onclick="neste('q1','q2');poeng(['i'])">Ehh...egentlig ikke...</button>
+                            <!--If they choose opt2, poeng extraQ2 to neste question -->
+                        </div>
+                    </div>
+                    <div class="hide" id="q2">
+                        <div class="message">
+                            Hva vil du gjøre?
+                        </div>
+                        <div class="phonebuttons">
+                            <button onclick="neste('q2','q3');poeng(['s', 'p'])">Stranda?</button> 
+                            <button onclick="neste('q2','q3');poeng(['i', 'j'])">Vil bare bli inne med vifta på full blast i dag ass</button> 
+                            <button onclick="neste('q2','q3');poeng(['n', 'f'])">kafe?</button> 
+
+                            <!--If they choose opt1, poeng extraQ3a-->
+                            <!--If they choose any other opt, poeng extraQ3b-->
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hide" id="q3">
-                <p class="rMessage" id="q3svar"></p>
-                <p>
+
+
+            <div class="hide align" id="q3">
+                <div>
                     Og med det så drar de deg med til stranda. Solen steker og du føler at du er solens favoritt med hvor mye den stråler mot deg.
                     Hva nå?
-                </p>
-                <button onclick="neste('q3','q4');poeng(['e', 'p'])">Hopper uti vannet. Jeg er ikke redd for å bli solbrent!</button>
-                <button onclick="neste('q3','q4');poeng(['s', 'j'])">Solkrem. Beskyttelse er viktigst nå</button>
-                <button onclick="neste('q3','q4');poeng(['i', 'n'])">Ta ut boka mi</button>
-                <button onclick="neste('q3','q4');poeng(['n', 't'])">Stirre ut på vannet og dagdrømme om hvilke fisker og ekle sjøvesner som er der</button> 
+                </div>
+                <div class="buttons">
+                    <button onclick="neste('q3','q4');poeng(['e', 'p'])">Hopper uti vannet. Jeg er ikke redd for å bli solbrent!</button>
+                    <button onclick="neste('q3','q4');poeng(['s', 'j'])">Solkrem. Beskyttelse er viktigst nå</button>
+                    <button onclick="neste('q3','q4');poeng(['i', 'n'])">Ta ut boka mi</button>
+                    <button onclick="neste('q3','q4');poeng(['n', 't'])">Stirre ut på vannet og dagdrømme om hvilke fisker og ekle sjøvesner som er der</button> 
+                </div>
             </div>
-            <div class="hide" id="q4">
-                <p>
+            <div class="hide align" id="q4">
+                <div>
                     Du fortsetter å nyte dagen, og mens du ikke følger med så har en forbasket måke fått nebbet sitt inn i din favoritt snacks!
                     Hvordan skal du håndtere måken?
-                </p>
-                <button onclick="neste('q4','q5');poeng(['f', 'p'])">Sveiv med armene og skrik tilbake</button> 
-                <button onclick="neste('q4','q5');poeng(['j', 's'])">Rolig sette meg et annet sted og bare følg med slik at den ikke får tak i resten av snacksen</button> 
-                <button onclick="neste('q4','q5');poeng(['n', 'f'])">Gi den mat og prøv å bli venner med den. Kanskje den bare var sutlen?</button> 
-                <button onclick="neste('q4','q5');poeng(['t', 'p'])">Bruker dette som en distraksjon sånn at jeg kan stjele vennene mines snacks</button>
+                </div>
+                <div class="buttons">
+                    <button onclick="neste('q4','q5');poeng(['f', 'p'])">Sveiv med armene og skrik tilbake</button> 
+                    <button onclick="neste('q4','q5');poeng(['j', 's'])">Rolig sette meg et annet sted og bare følg med slik at den ikke får tak i resten av snacksen</button> 
+                    <button onclick="neste('q4','q5');poeng(['n', 'f'])">Gi den mat og prøv å bli venner med den. Kanskje den bare var sutlen?</button> 
+                    <button onclick="neste('q4','q5');poeng(['t', 'p'])">Bruker dette som en distraksjon sånn at jeg kan stjele vennene mines snacks</button>
+                </div>
             </div>
-            <div class="hide" id="q5">
-                <p>
+            <div class="hide align" id="q5">
+                <div>
                     Når situasjonen roer seg ned vil vennene dine deles inn i to grupper. Den ene vil svømme og den andre gruppen vil kjøpe is.
                     Hva vil du?
-                </p>
-                <button onclick="neste('q5','q6');poeng(['s', 'p'])">Svæmme selvfølgelig! Folk kommer til stranda for å svømme</button>
-                <button onclick="neste('q5','q6');poeng(['f', 'i'])">Iskrem 100%. Jeg trengte en pause uansett</button> 
-                <button onclick="neste('q5','q6');poeng(['e','n'])">Hvorfor ikke begge? Spise iskrem mens jeg svømmer? Høres ut som en fantastisk tid</button> 
-                <button onclick="neste('q5','q6');poeng(['t','j'])">Jeg kaster en mynt!</button> 
+                </div>
+                <div class="buttons">
+                    <button onclick="neste('q5','q6');poeng(['s', 'p'])">Svæmme selvfølgelig! Folk kommer til stranda for å svømme</button>
+                    <button onclick="neste('q5','q6');poeng(['f', 'i'])">Iskrem 100%. Jeg trengte en pause uansett</button> 
+                    <button onclick="neste('q5','q6');poeng(['e','n'])">Hvorfor ikke begge? Spise iskrem mens jeg svømmer? Høres ut som en fantastisk tid</button> 
+                    <button onclick="neste('q5','q6');poeng(['t','j'])">Jeg kaster en mynt!</button> 
+                </div>
             </div>
-            <div class="hide" id="q6">
-                <p>
+            <div class="hide align" id="q6">
+                <div>
                     På vei til din valgte aktivitet hører du noe kjent.... Det er din favoritt sang! This is your jam!
                     Hva gjør du?
-                </p>
-                <button onclick="neste('q6','q7');poeng(['e','f'])">Begynn å danse og få med deg vennene dine</button> 
-                <button onclick="neste('q6','q7');poeng(['i','s'])">Smil og nyt øyeblikket i stillhe</button> 
-                <button onclick="neste('q6','q7');poeng(['n','f'])">Tenk på minnene du har knyttet til denne sangen</button> 
-                <button onclick="neste('q6','q7');poeng(['t','j'])">Sjekk om den er på noens spilleliste så du kan legge den til din senere</button>
+                </div>
+                <div class="buttons">
+                    <button onclick="neste('q6','q7');poeng(['e','f'])">Begynn å danse og få med deg vennene dine</button> 
+                    <button onclick="neste('q6','q7');poeng(['i','s'])">Smil og nyt øyeblikket i stillhe</button> 
+                    <button onclick="neste('q6','q7');poeng(['n','f'])">Tenk på minnene du har knyttet til denne sangen</button> 
+                    <button onclick="neste('q6','q7');poeng(['t','j'])">Sjekk om den er på noens spilleliste så du kan legge den til din senere</button>    
+                </div>
             </div>
-            <div class="hide" id="q7">
-                <p>
+            <div class="hide align" id="q7">
+                <div>
                     Dagen går mot slutten og solen maler himmelen rosa når finner du en mystisk, glødende konkylie.
-                </p>
-                <button onclick="neste('q7','q8');poeng(['e', 'p'])">jeg plukker den opp uten å nøle. "Dette er main character nmoment"</button>
-                <button onclick="neste('q7','q8');poeng(['t', 'n'])">Jeg undersøker den. Kanskje den er radioaktiv? Bioluminescerende alger? UV-stråling?</button> 
-                <button onclick="neste('q7','q8');poeng(['i', 's'])">Jeg lar den ligge. Føles ikke trygt</button> 
-                <button onclick="neste('q7','q8');poeng(['f', 'n'])">Jeg kaster den tilbake i havet. Kanskje en havfrue mistet den?</button>
+                </div>
+                <div class="buttons">
+                        <button onclick="neste('q7','q8');poeng(['e', 'p'])">jeg plukker den opp uten å nøle. "Dette er main character nmoment"</button>
+                        <button onclick="neste('q7','q8');poeng(['t', 'n'])">Jeg undersøker den. Kanskje den er radioaktiv? Bioluminescerende alger? UV-stråling?</button> 
+                        <button onclick="neste('q7','q8');poeng(['i', 's'])">Jeg lar den ligge. Føles ikke trygt</button> 
+                        <button onclick="neste('q7','q8');poeng(['f', 'n'])">Jeg kaster den tilbake i havet. Kanskje en havfrue mistet den?</button>
+                </div>
             </div>
-            <div class="hide" id="q8">
-                <p>
+            <div class="hide align" id="q8">
+                <div>
                     I det fjerne ser du noe ... blått ... og høyt.  
                     Det er en gigantisk bølge!
-                </p>
-                <button onclick="neste('q8','q9');poeng(['s', 'j'])">"Oh shit! Jeg må komme meg vekk herifra!"</button> 
-                <button onclick="neste('q8','q9');poeng(['e', 'p'])">"Woooaaah. Tenk på alle de kule fortellingene jeg kan få ut av å surfe den!"</button>
-                <button onclick="neste('q8','q9');poeng(['f', 'j'])">"Hvorfor løper ikke barna?! Noen må redde dem!"</button> 
-                <button onclick="neste('q8','q9');poeng(['n', 'i'])">"Jaja, jeg har levd et godt liv"</button> 
+                </div>
+                <div class="buttons">
+                    <button onclick="neste('q8','q9');poeng(['s', 'j'])">"Oh shit! Jeg må komme meg vekk herifra!"</button> 
+                    <button onclick="neste('q8','q9');poeng(['e', 'p'])">"Woooaaah. Tenk på alle de kule fortellingene jeg kan få ut av å surfe den!"</button>
+                    <button onclick="neste('q8','q9');poeng(['f', 'j'])">"Hvorfor løper ikke barna?! Noen må redde dem!"</button> 
+                    <button onclick="neste('q8','q9');poeng(['n', 'i'])">"Jaja, jeg har levd et godt liv"</button> 
+                </div>
             </div>
-            <div class="hide" id="q9">
-                <p>
+            <div class="hide align" id="q9">
+                <div>
                     Vell... uansett hva du valgte så mislyktes du og havnet inni bølgen.  
                     Men noe er rart. Du føler ingen smerte?
-                </p>
-                <button onclick="neste('q9','q10');poeng(['t','j'])">"Jaja, spiller ingen rolle. Klarer ikke å svømme til overflaten uansett"</button> 
-                <button onclick="neste('q9','q10');poeng(['n', 'p'])">Derfor jeg åpner øynene mine</button> 
+                </div>
+                <div class="buttons">
+                    <button onclick="neste('q9','q10');poeng(['t','j'])">"Jaja, spiller ingen rolle. Klarer ikke å svømme til overflaten uansett"</button> 
+                    <button onclick="neste('q9','q10');poeng(['n', 'p'])">Derfor jeg åpner øynene mine</button> 
+                </div>
             </div>
-            <div class="hide" id="q10">
-                <p>
+            <div class="hide align" id="q10">
+                <div>
                     Men noe er annerledes. Wow... du har fått en havfruehale. Hva er dine fremtidsplaner?
-                </p>
-                <button onclick="neste('q10','q11');poeng(['n', 'p'])">Jeg skal utforske havet og finne Atlantis!</button> 
-                <button onclick="neste('q10','q11');poeng(['t','j'])">Jeg skal etablere et politisk havfruekongedømme med demokratiske reformer</button> 
-                <button onclick="neste('q10','q11');poeng(['f', 'p'])">Jeg skal adoptere 50 klovnefisk og åpne en undervannskafe</button> 
-                <button onclick="neste('q10','q11');poeng(['s','t'])">Jeg klyper meg selv. Dette må være en drøm</button>
+                </div>
+                <div class="buttons">
+                    <button onclick="neste('q10','q11');poeng(['n', 'p'])">Jeg skal utforske havet og finne Atlantis!</button> 
+                    <button onclick="neste('q10','q11');poeng(['t','j'])">Jeg skal etablere et politisk havfruekongedømme med demokratiske reformer</button> 
+                    <button onclick="neste('q10','q11');poeng(['f', 'p'])">Jeg skal adoptere 50 klovnefisk og åpne en undervannskafe</button> 
+                    <button onclick="neste('q10','q11');poeng(['s','t'])">Jeg klyper meg selv. Dette må være en drøm</button>
+                </div>
             </div>
-            <div class="hide" id="q11">
-                <p id="q10svar"></p>
-                <p>så åpner du øynene dine. Det var bare en drøm, og nå er du solbrent.</p>
-                <p>slutt</p>
-                <button onclick="neste('q11', 'results'); done()">See results</button>
+            <div class="hide align" id="q11">
+                <div>så åpner du øynene dine. Det var bare en drøm, og nå er du solbrent.</div>
+                <div>slutt</div>
+                <div class="buttons">
+                    <button onclick="neste('q11', 'results'); done()">See results</button>
+                </div>
             </div>
-            <div class="hide" id="results">
-                <p>du er en...</p>
-                <p id="artstype"></p>
-                <img id="bilde" src="" alt="description" />
+
+
+            <div class="hide align" id="results">
+                <div id="artstype">Du er en...</div>
+                <img id="bilde" src="" alt="fiskebilde"/>
                 <div id="facts">
-                    <p id="fact1"></p>
-                    <p id="fact2"></p>
-                    <p id="fact3"></p>
-                    <p id="fact4"></p>
+                    <div id="fakta1" class="factbox"></div>
+                    <div id="fakta2" class="factbox"></div>
+                    <div id="fakta3" class="factbox"></div>
+                    <div id="fakta4" class="factbox"></div>
                 </div>
-                <div id="friends">
-                    <p id="friend1"></p>
-                    <p id="friend2"></p>
-                </div>
-                <div id="enemies">
-                    <p id="enemy1"></p>
-                    <p id="enemy2"></p>
+                <div class="flex">
+                    <div>
+                        <div class="header">Soulmate</div>
+                        <div id="venneDiv" class="square">
+                            <img id="venn" src="" alt="venne fisk"/>
+                        </div>
+                        <div class="bottom" id="vennedynamikk">dynamic</div>
+                    </div>
+                    <div>
+                        <div class="header">Sworn enemy</div>
+                        <div id="fiendeDiv" class="square">
+                            <img id="fiende" src="" alt="fiende fisk"/>
+                        </div>
+                        <div class="bottom" id="fiendedynamikk">dynamic</div>
+                    </div>
                 </div>
             </div>
+
+
+
+
         </div>
     </body>
 </html>
