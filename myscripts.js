@@ -14,50 +14,49 @@ let mbtiScore = {
     j: 0
 };
 
-// [img, fact1, fact2, fact3, fact4, soulmate, enemy, art, friend dynamikk, enemy dynamikk]
+// [img, fakta1, fakta2, fakta3, fakta4, soulmate, enemy, art, friend dynamikk, enemy dynamikk]
 let mbtiArrays = {
-    intj: ["","the quiet but smart kid","Viber for seg selv","Ser alt men ingen ser deg","Loner","enfp","esfp","Tunge"],
+    intj: ["fisker/tunge.png","the quiet but smart kid","Viber for seg selv","Ser alt men ingen ser deg","Loner","enfp","esfp","Tunge"],
     
-    intp: ["","Certified yapper","smart yapper","'umm actually....'","Aristoteles wannabe","entj","esfj","Lange"], 
+    intp: ["fisker/lange.png","Certified yapper","smart yapper","'umm actually....'","Aristoteles wannabe","entj","esfj","Lange"], 
     
-    entj: ["","Big boss of the lake","Hard on the outside soft on the inside","'I want it I got it'","kontrollfreak","intp","isfp","Gjedde"],
+    entj: ["fisker/gjedde.png","Big boss of the lake","Hard on the outside soft on the inside","'I want it I got it'","kontrollfreak","intp","isfp","Gjedde"],
     
-    entp: ["","Rampete liten drittunge, men fremdeles favoritten","Starter drama fordi du kjeder deg","Liker utfordringer","Irriterende","infj","istj","Abbor"], 
+    entp: ["fisker/abbor.png","Rampete liten drittunge, men fremdeles favoritten","Starter drama fordi du kjeder deg","Liker utfordringer","Irriterende","infj","istj","Abbor"], 
     
-    infj: ["","Wholesome","Hjelpsom, men vil ikke ha hjelp","Sårbar","'Its not a phase mom!'","enfp","estp","Knurr"],
+    infj: ["fisker/knurr.png","Wholesome","Hjelpsom, men vil ikke ha hjelp","Sårbar","'Its not a phase mom!'","enfp","estp","Knurr"],
     
-    infp: ["","Gråter mot månen", "Lojal","Du tror du er dyp, men du er ikke det","Ser muligheter men tørr ikke gripe tak","enfj","estj","Fjesing"],
+    infp: ["fisker/fjesing.png","Gråter mot månen", "Lojal","Du tror du er dyp, men du er ikke det","Ser muligheter men tørr ikke gripe tak","enfj","estj","Fjesing"],
     
-    enfj: ["","Ta vann over hodet","Leder fisker like store som seg selv", "Motiverer hverandre","Lever i store stimer","infp","istp","Tunfisk"], 
+    enfj: ["fisker/tunfisk.png","Ta vann over hodet","Leder fisker like store som seg selv", "Motiverer hverandre","Lever i store stimer","infp","istp","Tunfisk"], 
     
-    enfp: ["","Svømmer i gigantiske stimer, men ingen vet hvor de skal", "Energisk og sprudlende", "'Go with the flow man'","Fullfører aldri, men optimistisk","infj",,"istj","Reke"], 
+    enfp: ["fisker/reke.png","Svømmer i gigantiske stimer, men ingen vet hvor de skal", "Energisk og sprudlende", "'Go with the flow man'","Fullfører aldri, men optimistisk","infj",,"istj","Reke"], 
     
-    istj: ["","Excel-fetish","Teachers pet", "Prøver for hardt","For strukturerte","isfj","enfp","Torsk"], 
+    istj: ["fisker/torsk.png","Excel-fetish","Teachers pet", "Prøver for hardt","For strukturerte","isfj","enfp","Torsk"], 
     
-    istp: ["","Loners at heart", "For mange hobbyer fordi du er aldri med folk", "Observant","Background character som tunge","isfp","enfj", "Ermittkreps"],
+    istp: ["fisker/ermittkreps.png","Loners at heart", "For mange hobbyer fordi du er aldri med folk", "Observant","Background character som tunge","isfp","enfj", "Ermittkreps"],
     
-    estj: ["","Stoler ikke på andre", "God complex", "Hvorfor gi oppgaven til andre når jeg kan gjøre den bedre selv","Du vet hva du vil","isfj","infp", "Harr"],
+    estj: ["fisker/harr.png","Stoler ikke på andre", "God complex", "Hvorfor gi oppgaven til andre når jeg kan gjøre den bedre selv","Du vet hva du vil","isfj","infp", "Harr"],
     
-    estp: ["","Bad communicator", "Intrusive thoughts", "Will fight a child and win","Will pick a fight with God","esfp","infj", "Europeisk ål"],
+    estp: ["fisker/europeisk_ål.png","Bad communicator", "Intrusive thoughts", "Will fight a child and win","Will pick a fight with God","esfp","infj", "Europeisk ål"],
     
-    isfj: ["","lojal mot de nærmeste", "Just a wholesome grandma","Tar vare på trandisjoner","Too cute to diss","sefj","entp","Sjøhest"],
+    isfj: ["fisker/tunge.png","lojal mot de nærmeste", "Just a wholesome grandma","Tar vare på trandisjoner","Too cute to diss","sefj","entp","Sjøhest"],
     
-    isfp: ["","Shallow","Adaptable","Delulu","Anxiety to the max","infp","entj","Kamskjell"],
+    isfp: ["fisker/kamskjell.png","Shallow","Adaptable","Delulu","Anxiety to the max","infp","entj","Kamskjell"],
     
-    esfj: ["", "Gentle giant","Moren i venne gjengen","Alle elsker dem","Too cute to diss 2.0","isfj","intp","Sjøku"],
+    esfj: ["fisker/sjøku.png", "Gentle giant","Moren i venne gjengen","Alle elsker dem","Too cute to diss 2.0","isfj","intp","Sjøku"],
     
-    esfp: ["", "Tiktok star wannabe", "Juicy lips for you", "Attention seeker","No real homies, aka. loner in the closet","isfp","intj","Berggylt"]
+    esfp: ["fisker/berggylt.png", "Tiktok star wannabe", "Juicy lips for you", "Attention seeker","No real homies, aka. loner in the closet","isfp","intj","Berggylt"]
 };
 
 function neste(forrige, neste) {
-    var ne = document.getElementById(neste);
-    var fr = document.getElementById(forrige);
-    ne.style.display = "block";
-    fr.style.display = "none";
-    /*
-    document.getElementById(forrige).classList.add("hide");
-    document.getElementById(neste).classList.remove("hide");
-    */
+    document.getElementById(neste).style.display = "flex";
+    document.getElementById(forrige).style.display = "none";
+    if (forrige=="intro") {
+        document.getElementById("phone").style.display = "flex";
+    } else if (forrige=="q2") {
+        document.getElementById("phone").style.display = "none";
+    }
 }
 
 function poeng(letters){
@@ -78,13 +77,15 @@ function done() {
             mbti += letters[i+1]
         }
     }
-    let result = mbtiArrays[mbti];
-    document.getElementById("artstype").textContent = result[7]+"!";
-    document.getElementById("bilde").src = result[0];
-    document.getElementById("fact1").textContent = result[1];
-    document.getElementById("fact2").textContent = result[2];
-    document.getElementById("fact3").textContent = result[3];
-    document.getElementById("fact4").textContent = result[4];
-    let friend = result[5];
-    let enemy = result[6];
+    let resultat = mbtiArrays[mbti];
+    document.getElementById("artstype").textContent += resultat[7]+"!";
+    document.getElementById("bilde").src = resultat[0];
+    document.getElementById("fakta1").textContent = resultat[1];
+    document.getElementById("fakta2").textContent = resultat[2];
+    document.getElementById("fakta3").textContent = resultat[3];
+    document.getElementById("fakta4").textContent = resultat[4];
+    let venn = mbtiArrays[resultat[5]];
+    let fiende = mbtiArrays[resultat[6]];
+    document.getElementById("venn").src = venn[0];
+    document.getElementById("fiende").src = fiende[0];
 }
